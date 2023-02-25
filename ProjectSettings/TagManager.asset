@@ -9,6 +9,7 @@ TagManager:
   - Background
   - Cleaner
   - Light
+  - GlobalLight
   layers:
   - Default
   - TransparentFX

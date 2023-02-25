@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class PlayerCamera : MonoBehaviour
 {
@@ -11,13 +12,14 @@ public class PlayerCamera : MonoBehaviour
     public Image darknessImage;
     public BoolVariable playerAlive;
     float offsetx;
+    public Light2D globalLight;
 
     // Start is called before the first frame update
     void Start()
     {
         offsetx = transform.position.x - playerTransform.position.x;
 
-        darkness.value = 0;
+        globalLight.intensity = 1;
     }
 
     // Update is called once per frame
@@ -30,13 +32,14 @@ public class PlayerCamera : MonoBehaviour
     }
     private void FixedUpdate()
     {
+
         if (playerAlive.value)
         {
-            darkness.value += (Time.fixedDeltaTime / 13f);
+            globalLight.intensity -= (Time.fixedDeltaTime / 13f);
         }
         else
         {
-            darkness.value = 0;
+            globalLight.intensity = 1;
         }
 
         darknessImage.color = new Color(0,0,0, darkness.value);
