@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 05cf1bc6b53323247b8b38038584ce39
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - blockGenerator: {instanceID: 0}
+  - darkness: {fileID: 11400000, guid: da568f8c7ef4e8f4393d17da060a65d7, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
